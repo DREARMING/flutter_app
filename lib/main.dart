@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'pages/Test.dart';
 import 'pages/StackTest.dart';
 import 'pages/NavigationTest.dart';
+import 'pages/PlatformViewTest.dart';
 
 void main() => runApp(MyApp());
 
@@ -121,6 +122,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(context, MaterialPageRoute<String>(builder: (context)=>(NavigationTest())));
               },
               child: Text('Join To Test Navigation Page', style: TextStyle(color: Colors.blue) ),
+            ),
+            FlatButton(
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute<String>(builder: (context)=>(PlatformViewTest())));
+              },
+              child: Text('Join To Test PlatView Page', style: TextStyle(color: Colors.blue) ),
             ),
             Text(
               '$_counter',
